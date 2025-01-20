@@ -1,0 +1,24 @@
+body {
+    background-color: rgb(107, 207, 184);
+    font-family: 'Courier New', Courier, monospace;
+}
+
+h1 {
+    color: rgb(52, 17, 65);
+}
+
+form {
+    padding: 20px;
+    border: 2px solid rgb(211, 178, 178);
+    border-radius: 10px;
+    width: 300px;
+    margin: 0 auto;
+    background-color: white;
+}
+
+select, button {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    font-size: 1rem;
+}
