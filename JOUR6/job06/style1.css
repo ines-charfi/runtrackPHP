@@ -1,0 +1,14 @@
+body {
+    background-color: pink;
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif
+}
+form {
+    text-align: center;
+    margin-top: 50px;
+}
+button {
+    padding: 10px 20px;
+    background-color: rgb(82, 78, 80);
+    color: white;
+    border: none;
+}

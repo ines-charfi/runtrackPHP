@@ -8,7 +8,7 @@ $hauteur = 0;
  if (isset($_POST[""])) {
     $largeur = $_POST['largeur'];
     $hauteur = $_POST['hauteur'];
-     echo "$largeur"; 
+     echo $largeur; 
      echo $hauteur; 
 }
 ?>

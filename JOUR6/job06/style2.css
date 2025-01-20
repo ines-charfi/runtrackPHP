@@ -1,0 +1,14 @@
+body {
+    background-color: rgb(140, 228, 223);
+    font-family: 'Courier New', Courier, monospace;
+}
+form {
+    text-align: center;
+    margin-top: 50px;
+}
+button {
+    padding: 10px 20px;
+    background-color: rgb(172, 54, 119);
+    color: white;
+    border: none;
+}

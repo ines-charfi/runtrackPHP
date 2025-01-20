@@ -1,7 +1,7 @@
 <?php
     if (isset($_POST)) {
-        $text = $_POST['inputText'];
-        $transformation = $_POST['transformation'];
+        $text = $_POST[''];
+        $transformation = $_POST[''];
 
         if ($transformation == 'gras') {
             $text = strtoupper($text); 
