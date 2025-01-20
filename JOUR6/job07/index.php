@@ -17,7 +17,7 @@ function bubblesort($tab, $croissant) {
             $tab[$i] = $tab[$index];
             $tab[$index] = $temp;
         }
-    }
+    }                       
     
     return $tab;
 }
