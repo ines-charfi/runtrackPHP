@@ -1,0 +1,70 @@
+body {
+    font-family:Georgia, 'Times New Roman', Times, serif;
+    background-color: #de8dda;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    flex-direction: column;
+}
+
+h1 {
+    color: #3a0d4e;
+}
+
+form {
+    background-color: #e2ebba;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+    width: 300px;
+    text-align: center;
+    align-items: center;
+}
+
+input[type="text"] {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+}
+
+button {
+    padding: 10px 20px;
+    background-color: #6c76a7;
+    border: none;
+    color: white;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+button:hover {
+    background-color: #df83b2;
+}
+
+.reset-btn {
+    background-color: #e4eef0;
+}
+
+.reset-btn:hover {
+    background-color: #8a1d49;
+}
+
+.added-prenoms {
+    margin-top: 20px;
+    font-size: 18px;
+    color: #555;
+}
+
+.added-prenoms b {
+    color: #dcd0d0;
+}
