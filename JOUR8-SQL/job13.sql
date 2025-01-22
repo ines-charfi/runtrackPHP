@@ -1,0 +1,1 @@
+select AVG(capacite) from 'salles'

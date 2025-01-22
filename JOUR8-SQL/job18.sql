@@ -1,0 +1,1 @@
+SELECT etage.nom AS Etage, salles.nom AS "Biggest Room", MAX(salles.capacite) FROM etage, salles ;

@@ -1,0 +1,1 @@
+select nom , id-etage from 'salles'
