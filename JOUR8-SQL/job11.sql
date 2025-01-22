@@ -1,1 +1,1 @@
-select SUM (capacite) from 'salles'
+select SUM (capacite) from 'salles' ;
