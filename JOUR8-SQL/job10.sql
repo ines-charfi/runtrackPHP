@@ -1,0 +1,1 @@
+select SUM(superfiie) from 'etage'
