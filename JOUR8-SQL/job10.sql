@@ -1,1 +1,1 @@
-select SUM(superfiie) from 'etage';
+select SUM(superficie) from 'etage';
