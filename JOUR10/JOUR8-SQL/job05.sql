@@ -1,0 +1,1 @@
+select prénom nom naissance from 'étudiants' where sexe = 'Femme'

@@ -1,0 +1,1 @@
+select SUM (capacite) from 'salles' ;

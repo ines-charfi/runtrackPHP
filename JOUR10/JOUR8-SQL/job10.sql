@@ -1,0 +1,1 @@
+select SUM(superficie) from 'etage';

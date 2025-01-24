@@ -1,0 +1,1 @@
+SELECT etage.nom as nom_etage, salles.nom as nom_salle FROM etage JOIN salles WHERE salles.id_etage = etage.id;

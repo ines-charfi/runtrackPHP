@@ -1,0 +1,1 @@
+select COUNT(id) from 'étudiants'

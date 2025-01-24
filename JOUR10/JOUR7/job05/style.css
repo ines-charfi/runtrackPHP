@@ -1,0 +1,74 @@
+/* Général */
+body {
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif
+    text-align: center;
+    background-color: #fcdbfc;
+    padding: 20px;
+}
+
+
+h1 {
+    color: #92053e;
+    text-align: center;
+}
+
+
+table {
+    margin: 20px auto;
+    border-collapse: collapse;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+
+td {
+    width: 100px;
+    height: 100px;
+    text-align: center;
+    vertical-align: middle;
+    font-size: 2em;
+    font-weight: bold;
+    background-color: #e6e6e6;
+    transition: background-color 0.3s ease;
+}
+
+td button {
+    width: 100%;
+    height: 100%;
+    border: none;
+    background-color: transparent;
+    font-size: 2em;
+    color: #333;
+    cursor: pointer;
+}
+
+td button:hover {
+    background-color: #d3d3d3;
+}
+
+
+td button:focus {
+    outline: none;
+    background-color: #d21f9c;
+}
+
+
+form button {
+    margin-top: 20px;
+    padding: 10px 20px;
+    font-size: 1.2em;
+    background-color: #eb6f9e;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+form button:hover {
+    background-color: #e1e8b4;
+}
+
+form button:focus {
+    outline: none;
+}
+

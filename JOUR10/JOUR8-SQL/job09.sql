@@ -1,0 +1,1 @@
+select * from 'étudiants' where datediff( currentdate(), naissance)/365 <= 18
