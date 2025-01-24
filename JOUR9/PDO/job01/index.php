@@ -6,7 +6,7 @@
             
     //On établit la connexion
     try {
-        // Connexion à la base de données
+       
         $conn = new PDO("mysql:host=$hostname;dbname=$dbname", $username, $password);
         $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
         $result = $conn->prepare("SELECT * FROM étudiants");
@@ -16,8 +16,6 @@
     } catch (PDOException $e) {
         echo "Erreur : " . $e->getMessage();
     }
-
-  
     $conn = null;
 ?>
 
