@@ -5,11 +5,18 @@
     $password = '';
             
     //On établit la connexion
-    $conn = new mysqli($hostname, $username, $password, $dbname);
-    $result = $conn->query("SELECT prenom , nom , naissance FROM étudiants WHERE naissance BETWEEN '1998-01-01' AND '2018-12-31'");
-    $etudiants = $result->fetch_all(MYSQLI_ASSOC);
-
-    $conn->close();
+    try {
+       
+        $conn = new PDO("mysql:host=$hostname;dbname=$dbname", $username, $password);
+        $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+        $result = $conn->prepare("SELECT prenom , nom , naissance FROM étudiants WHERE naissance BETWEEN '1998-01-01' AND '2018-12-31'");
+        $result->execute();
+        $etudiants = $result->fetchAll(PDO::FETCH_ASSOC);
+        var_dump($etudiants);
+    } catch (PDOException $e) {
+        echo "Erreur : " . $e->getMessage();
+    }
+    $conn = null;
 ?>
 
 <!DOCTYPE html>

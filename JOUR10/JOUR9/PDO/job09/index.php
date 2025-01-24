@@ -28,7 +28,7 @@
             <tr>
                     <th>ID</th>
                     <th>Nom</th>
-                    <th>id-etage</th>
+                    <th>id_etage</th>
                     <th>capacite</th>
                    
                 </tr>
@@ -44,7 +44,7 @@
                         <tr>
                             <td>" . $champs['id'] . "</td>
                             <td>" . $champs['nom'] . "</td>
-                            <td>" . $champs['id-etage'] . "</td>
+                            <td>" . $champs['id_etage'] . "</td>
                             <td>" . $champs['capacite'] . "</td>
                         </tr>");
                     }

@@ -5,13 +5,20 @@
     $password = '';
             
     //On établit la connexion
-    $conn = new mysqli($hostname, $username, $password, $dbname);
-    $result = $conn->query("SELECT * FROM  salles ORDER BY capacite DESC");
-    $etudiants = $result->fetch_all(MYSQLI_ASSOC);
-    var_dump($etudiants);
-
-    $conn->close();
+    try {
+       
+        $conn = new PDO("mysql:host=$hostname;dbname=$dbname", $username, $password);
+        $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+        $result = $conn->prepare("SELECT * FROM  salles ORDER BY capacite DESC");
+        $result->execute();
+        $etudiants = $result->fetchAll(PDO::FETCH_ASSOC);
+        var_dump($etudiants);
+    } catch (PDOException $e) {
+        echo "Erreur : " . $e->getMessage();
+    }
+    $conn = null;
 ?>
+   
 
 <!DOCTYPE html>
 <html>
@@ -44,7 +51,7 @@
                         <tr>
                             <td>" . $champs['id'] . "</td>
                             <td>" . $champs['nom'] . "</td>
-                            <td>" . $champs['id-etage'] . "</td>
+                            <td>" . $champs['id_etage'] ."</td>
                             <td>" . $champs['capacite'] . "</td>
                         </tr>");
                     }

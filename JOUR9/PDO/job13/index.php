@@ -5,12 +5,18 @@
     $password = '';
             
     //On établit la connexion
-    $conn = new mysqli($hostname, $username, $password, $dbname);
-    $result = $conn->query("SELECT etage.nom as nom_etage, salles.nom as nom_salle FROM etage JOIN salles WHERE salles.id_etage = etage.id;");
-    $etudiants = $result->fetch_all(MYSQLI_ASSOC);
-    var_dump($etudiants);
-
-    $conn->close();
+    try {
+       
+        $conn = new PDO("mysql:host=$hostname;dbname=$dbname", $username, $password);
+        $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+        $result = $conn->prepare("SELECT etage.nom as nom_etage, salles.nom as nom_salle FROM etage JOIN salles WHERE salles.id_etage = etage.id");
+        $result->execute();
+        $etudiants = $result->fetchAll(PDO::FETCH_ASSOC);
+        var_dump($etudiants);
+    } catch (PDOException $e) {
+        echo "Erreur : " . $e->getMessage();
+    }
+    $conn = null;
 ?>
 
 <!DOCTYPE html>
